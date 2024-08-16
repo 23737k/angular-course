@@ -12,6 +12,8 @@ export class EmpleadoComponent {
   edad=26
   private sexo=''
 
+  isChecked= true;
+
   setSexo(event:Event){
     //Mediante target podemos acceder al elemento html del evento. 
     //Primero lo casteamos al elemento correspondiente con <>
