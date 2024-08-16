@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class EmpleadoComponent {
   nombre= 'Pedro'
   apellido= 'Perez'
-  empresa= ''
+  empresa= 'Mercado Libre'
   edad=26
   private sexo=''
 

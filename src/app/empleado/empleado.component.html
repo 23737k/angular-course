@@ -1,14 +1,24 @@
 <p>Nombre: {{ nombre }}</p>
 <p>Apellido: {{ apellido }}</p>
-<p>Empresa: {{ empresa.value }}</p>
+<p>Empresa: {{ empresa }}</p>
 <p>Edad: {{ edad }}</p>
 
-<input type="text" #empresa (keyup)="0" />
+<!--
+Two way binding: consiste en hacer un binding bidireccional, es decir que los cambios reflejados en el template
+se reflejan en el .ts y los cambios en el .ts se reflejan en el template.
+Para esto utilizamos ngModel, que para utilizarlo debemos importar FormsModule en app.module.ts
+
+Para ver su funcionamiento veamos el <p> Empresa. Alli mostrara el valor de la propidad empresa. 
+    Si cambiamos el input de abajo, cambiará la empresa. 
+    Si cambiamos el valor de la propiedad empresa, cambiara el valor del input de abajo
+-->
+
+<input type="text" [(ngModel)]="empresa"/>
 <br/>
 <br>
 
 <!--
-Aca hacemos un event binding, en donde ante un evento (click) llamamos a una función setSexo
+Event Binding: ante un evento (click) llamamos a una función setSexo
 Esta función puede recibir cualquier parametro o ninguno, pero en este caso recibe uno muy particular:
 $event: esto obtiene el evento que se desencadeno y lo pasa por parametro. Es util cuando queremos trabajar con
         el elemento del evento.
@@ -31,5 +41,16 @@ el getter. Este texto cambia dinamicamente con cada cambio en los botones de rad
 
 <br>
 
-
+<!--
+Property Binding: aca se hace un binding entre una property (isChecked) y un atributo. Cada vez que se
+cambie este atributo en el .ts, se reflejerará el cambio en el atributo del elemento en el html.
+-->
 <input type="checkbox" [checked]="isChecked">
+
+<!--
+Event Binding vs Property Binding:
+
+Event Binding: utiliza () para indicar el evento. El flujo es del template al .ts
+Property Binding: utiliza [] para indicar el atributo. El flujo es del .ts al template
+-->
+
