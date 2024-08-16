@@ -2,4 +2,29 @@
 <p>Apellido: {{ apellido }}</p>
 <p>Empresa: {{ empresa.value }}</p>
 <p>Edad: {{ edad }}</p>
+
 <input type="text" #empresa (keyup)="0" />
+<br/>
+<br>
+
+<!--
+Aca hacemos un event binding, en donde ante un evento (click) llamamos a una función setSexo
+Esta función puede recibir cualquier parametro o ninguno, pero en este caso recibe uno muy particular:
+$event: esto obtiene el evento que se desencadeno y lo pasa por parametro. Es util cuando queremos trabajar con
+        el elemento del evento.
+-->
+<label for="masculino">
+    <input name="sexo" id="masculino" type="radio" value="Masculino" (click)="setSexo($event)">
+    Masculino
+</label>
+<br>
+<label for="femenino">
+    <input name="sexo" id="femenino" type="radio" value="Femenino" (click)="setSexo($event)">
+    Femenino
+</label>
+<br>
+<!--
+Aqui hacemos una interpolación, en donde mostramos el valor de la propiedad sexo, que nos devuelve 
+el getter. Este texto cambia dinamicamente con cada cambio en los botones de radio.
+-->
+<p>Sexo {{getSexo()}}</p> 
