@@ -6,5 +6,30 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'angular-course';
+  title = 'Mini Calculadora';
+
+  numero1:number=0;
+  numero2:number=0;
+  resultado:number=0;
+
+  sumar():void{
+    this.resultado= this.numero1 + this.numero2;
+  }
+
+  restar():void{
+    this.resultado= this.numero1 - this.numero2;
+  }
+
+  multiplicar():void{
+    this.resultado= this.numero1 * this.numero2;
+  }
+
+  dividir():void{
+    if(this.numero2==0){
+      alert("El divisor no puede ser cero.");
+      return;
+    }
+    this.resultado= this.numero1 / this.numero2;
+  }
+
 }
