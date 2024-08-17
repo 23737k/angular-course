@@ -16,4 +16,15 @@
 Si la condicion se cumple, entonces se crea el elemento.
 registrado es un booleano.
 -->
-<p *ngIf="registrado">{{textoRegistro}} {{nombre}} {{apellido}}</p>
+<p *ngIf="registrado else noRegistrado">{{textoRegistro}} {{nombre}} {{apellido}}</p>
+
+<!--
+ng-template es una plantilla que no se renderiza por defecto. Todos los elementos que estén dentro tampoco se renderizarán.
+
+En este ejemplo, le defininos una variable de referencia (#) para que pueda ser referenciado.
+
+En el párrafo de arriba le agregamos un else a la expresión de *ngIf. Aquí en caso de que la condición del if sea falsa se renderizará el template indicado después del else
+-->
+<ng-template #noRegistrado>
+  <p>Usuario no registrado.</p>
+</ng-template>
