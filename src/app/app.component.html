@@ -1,0 +1,19 @@
+<h1>{{title}}</h1>
+<br>
+<br>
+<form>
+  <label for="nombre">Nombre: </label><input type="text" id="nombre" required [(ngModel)]="nombre" name="nombre">
+  <br>
+  <br>
+  <label for="apellido">Apellido: </label><input id="apellido" type="text" required [(ngModel)]="apellido" name="apellido">
+  <br>
+  <br>
+  <input type="button" value="Registrarse" (click)="registrarse()">
+  <br>
+  <br>
+</form>
+<!--
+Si la condicion se cumple, entonces se crea el elemento.
+registrado es un booleano.
+-->
+<p *ngIf="registrado">{{textoRegistro}} {{nombre}} {{apellido}}</p>

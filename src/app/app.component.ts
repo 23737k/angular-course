@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'angular-course';
+  title = 'Registro de usuario';
+  nombre:String="";
+  apellido:String="";
+  textoRegistro:String="El usuario se ha registrado con éxito: ";
+  registrado:Boolean=false;
+
+  registrarse():void{
+    if(this.nombre ==="" || this.apellido ===""){
+      alert("El nombre y apellido no pueden estar vacíos");
+      return;
+    }
+    this.registrado = true;
+  }
 }
