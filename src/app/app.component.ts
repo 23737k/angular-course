@@ -6,11 +6,23 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+
   title = 'Registro de usuario';
   nombre:String="";
   apellido:String="";
   textoRegistro:String="El usuario se ha registrado con éxito: ";
   registrado:Boolean=false;
+
+  entradasBlog:any[];
+
+  constructor(){
+    this.entradasBlog=[
+      {titulo:"Los kiwis dominan el mundo"},
+      {titulo:"Los pollitos cada vez más místicos"},
+      {titulo: "El blog más alucinante del mundo!"}
+    ]
+  }
+
 
   registrarse():void{
     if(this.nombre ==="" || this.apellido ===""){

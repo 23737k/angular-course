@@ -18,6 +18,17 @@ registrado es un booleano.
 -->
 <p *ngIf="registrado else noRegistrado">{{textoRegistro}} {{nombre}} {{apellido}}</p>
 
+
+<!--
+ngFor: recorre una lista o array. Podemos adicionalmente utilizar el indice
+-->
+
+<ul>
+  <li *ngFor="let entrada of entradasBlog; let indice=index"> {{indice+1}} {{entrada.titulo}}</li>
+</ul>
+
+
+
 <!--
 ng-template es una plantilla que no se renderiza por defecto. Todos los elementos que estén dentro tampoco se renderizarán.
 
