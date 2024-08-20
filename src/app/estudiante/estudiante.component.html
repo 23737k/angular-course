@@ -1,0 +1,10 @@
+<div>
+    <p>{{i+1}}. Nombre: {{student.nombre}} || Apellido: {{student.apellido}} || Edad: {{student.edad}}</p>
+    <p>Materias:</p>
+    <ul>
+        <li *ngFor="let materia of student.materias">{{materia}}</li>
+    </ul>
+    <br>
+    <br>
+    <app-formulario-materias></app-formulario-materias>
+</div>

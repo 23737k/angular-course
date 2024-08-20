@@ -3,10 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { EstudianteComponent } from './estudiante/estudiante.component';
+import { EstudiantesComponent } from './estudiantes/estudiantes.component';
+import { FormularioMateriasComponent } from './formulario-materias/formulario-materias.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    EstudianteComponent,
+    EstudiantesComponent,
+    FormularioMateriasComponent
   ],
   imports: [
     BrowserModule,
