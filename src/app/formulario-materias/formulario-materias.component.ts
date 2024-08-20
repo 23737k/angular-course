@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-formulario-materias',
@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrl: './formulario-materias.component.css'
 })
 export class FormularioMateriasComponent {
+  @Output() nuevaMateria = new EventEmitter<String>();
+  
+  agregarMateria(materia: String){
+    this.nuevaMateria.emit(materia);
+  }
+
   materia:String = '';
 }

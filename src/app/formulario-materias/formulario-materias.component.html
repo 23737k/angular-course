@@ -1,7 +1,7 @@
 <form action="">
     <label  for="materia">Materia </label>
-    <input type="text" name="materia" id="materia">
+    <input type="text" name="materia" id="materia" #inputMateria>
     <br>
     <br>
-    <input type="submit" value="Agregar">
+    <input type="button" value="Agregar" (click)="agregarMateria(inputMateria.value)">
 </form>

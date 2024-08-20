@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 import {Estudiante } from '../model/estudiante';
 
 @Component({
@@ -9,4 +9,8 @@ import {Estudiante } from '../model/estudiante';
 export class EstudianteComponent {
   @Input() student:Estudiante;
   @Input() i:number;
+
+  agregarMateria(materia:String){
+    this.student.materias.push(materia);
+  }
 }
