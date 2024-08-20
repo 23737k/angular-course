@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { EstudianteComponent } from './estudiante/estudiante.component';
 import { EstudiantesComponent } from './estudiantes/estudiantes.component';
 import { FormularioMateriasComponent } from './formulario-materias/formulario-materias.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FormularioMateriasComponent } from './formulario-materias/formulario-ma
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
