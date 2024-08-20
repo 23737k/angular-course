@@ -8,6 +8,9 @@
   <label for="apellido">Apellido: </label><input id="apellido" type="text" required [(ngModel)]="apellido" name="apellido">
   <br>
   <br>
+  <label for="cargo">Cargo: </label><input id="cargo" type="text" required [(ngModel)]="cargo" name="cargo">
+  <br>
+  <br>
   <input type="button" value="Registrarse" (click)="registrarse()">
   <br>
   <br>
@@ -16,7 +19,15 @@
 Si la condicion se cumple, entonces se crea el elemento.
 registrado es un booleano.
 -->
-<p *ngIf="registrado else noRegistrado">{{textoRegistro}} {{nombre}} {{apellido}}</p>
+<p *ngIf="registrado else noRegistrado">
+    {{textoRegistro}} 
+
+    <!--ngStyle: para estilos en linea condicionales ||  ngClass para clases css condicionales-->
+
+    <span [ngClass]="{kiwiClass : nombre == 'kiwi', polloClass : nombre == 'pollo'}" >{{nombre}} {{apellido}}</span>  <!--Se pueden definir una o varias clases css, con sus respectivas condiciones-->
+
+    con el cargo de: <span [ngStyle]="{color: cargo == 'ceo' ? 'red' : 'black' }">{{cargo}}</span> 
+</p>
 
 
 <!--
@@ -26,7 +37,6 @@ ngFor: recorre una lista o array. Podemos adicionalmente utilizar el indice
 <ul>
   <li *ngFor="let entrada of entradasBlog; let indice=index"> {{indice+1}} {{entrada.titulo}}</li>
 </ul>
-
 
 
 <!--

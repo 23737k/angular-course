@@ -1,0 +1,17 @@
+.kiwiClass{
+    color: green;
+    font-weight: bold;
+    text-decoration: underline;
+    font-family: Impact;
+    font-size: 32 px;
+}
+
+.polloClass{
+    color: yellow;
+    border-color: black;
+    font-family: 'Lucida Sans';
+    font-size: 32 px;
+    font-style: bold;
+    background-color: black;
+
+}

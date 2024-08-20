@@ -10,6 +10,7 @@ export class AppComponent {
   title = 'Registro de usuario';
   nombre:String="";
   apellido:String="";
+  cargo:String="";
   textoRegistro:String="El usuario se ha registrado con éxito: ";
   registrado:Boolean=false;
 
