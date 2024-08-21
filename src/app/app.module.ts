@@ -7,6 +7,7 @@ import { EstudianteComponent } from './estudiante/estudiante.component';
 import { EstudiantesComponent } from './estudiantes/estudiantes.component';
 import { FormularioMateriasComponent } from './formulario-materias/formulario-materias.component';
 import { FormsModule } from '@angular/forms';
+import { AlertService } from './service/alert.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [AlertService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
