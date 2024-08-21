@@ -9,13 +9,15 @@ import { FormularioMateriasComponent } from './formulario-materias/formulario-ma
 import { FormsModule } from '@angular/forms';
 import { AlertService } from './service/alert/alert.service';
 import { EstudianteService } from './service/estudiante/estudiante.service';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EstudianteComponent,
     EstudiantesComponent,
-    FormularioMateriasComponent
+    FormularioMateriasComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
