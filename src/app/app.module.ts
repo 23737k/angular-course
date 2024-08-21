@@ -10,6 +10,14 @@ import { FormsModule } from '@angular/forms';
 import { AlertService } from './service/alert/alert.service';
 import { EstudianteService } from './service/estudiante/estudiante.service';
 import { HomeComponent } from './home/home.component';
+import { RouterModule, Routes } from '@angular/router';
+import { ContactoComponent } from './contacto/contacto.component';
+
+//Definimos las rutas
+const appRoutes:Routes=[
+  {path:'', component:HomeComponent},
+  {path:'contacto', component:ContactoComponent}
+]
 
 @NgModule({
   declarations: [
@@ -17,12 +25,15 @@ import { HomeComponent } from './home/home.component';
     EstudianteComponent,
     EstudiantesComponent,
     FormularioMateriasComponent,
-    HomeComponent
+    HomeComponent,
+    ContactoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    //importar RouterModule e indicarle que rutas debe usar
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [AlertService, EstudianteService],
   bootstrap: [AppComponent]
