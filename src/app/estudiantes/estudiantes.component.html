@@ -1,18 +1,19 @@
+<div class="container col-md-5">
+    <form class="mb-5">
+        <div class="row">
+            <label class="form-label col" for="nombre">Nombre: <input class="form-control" type="text" name="nombre" id="nombre" [(ngModel)]="nombre"></label>
 
-<form>
-    <label for="nombre">Nombre: <input type="text" name="nombre" id="nombre" [(ngModel)]="nombre"></label>
-    <br>
-    <label for="apellido">Apellido: <input type="text" name="apellido" id="apellido" [(ngModel)]="apellido"></label>
-    <br>
-    <label for="edad">edad: <input type="text" name="edad" id="edad" [(ngModel)]="edad"></label>
-    <br>
-    <br>
-    <input type="button" value="Agregar estudiante" (click)="agregarEstudiante()">
-</form>
+            <label class="form-label col" for="apellido">Apellido: <input class="form-control" type="text" name="apellido" id="apellido" [(ngModel)]="apellido"></label>
+    
+            <label class="form-label col" for="edad">Edad: <input class="form-control" type="number" name="edad" id="edad" [(ngModel)]="edad"></label>
+        </div>
+        <input class="btn btn-primary " type="button" value="Agregar estudiante" (click)="agregarEstudiante()">
+    </form>
 
-<br>
+    <app-estudiante *ngFor="let estudiante of estudiantes; let indice = index"  
+        [student]="estudiante" [i]="indice">
+    </app-estudiante>
+</div>
 
-<app-estudiante *ngFor="let estudiante of estudiantes; let indice = index"  
-[student]="estudiante" [i]="indice">
-</app-estudiante>
+
 

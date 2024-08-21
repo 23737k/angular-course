@@ -1,5 +1,7 @@
 <form action="">
-    <label  for="materia">Materia </label>
-    <input type="text" name="materia" id="materia" #inputMateria>
-    <input type="button" value="Agregar" (click)="agregarMateria(inputMateria.value)">
+    <div class="input-group">
+        <input class="form-control" type="text" name="materia" id="materia" #inputMateria>
+        <input class="btn btn-success" type="button" value="Agregar" (click)="agregarMateria(inputMateria.value)">
+    </div>
+    
 </form>
