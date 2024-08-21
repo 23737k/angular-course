@@ -1,0 +1,16 @@
+<div class="container mt-2 col-md-5">
+    <h2  class=" text-center mb-4">Registro de estudiante</h2>
+    <form class="mb-5">
+        <div>
+            <label class="form-label" for="nombre">Nombre: </label>
+            <input class="form-control" type="text" name="nombre" id="nombre" [(ngModel)]="nombre">
+
+            <label class="form-label" for="apellido">Apellido: </label>
+            <input class="form-control" type="text" name="apellido" id="apellido" [(ngModel)]="apellido">
+
+            <label class="form-label" for="edad">Edad: </label>
+            <input class="form-control" type="number" name="edad" id="edad" [(ngModel)]="edad">
+        </div>
+        <input class="btn btn-primary mt-3" type="button" value="Agregar estudiante" (click)="agregarEstudiante()">
+    </form>
+</div>

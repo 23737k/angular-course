@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrl: './contacto.component.css'
 })
 export class ContactoComponent {
+  nombre:String;
+  apellido:String;
+  email:String;
+  consulta:String;
 
+  enviarConsulta(){
+    alert("Consulta enviada con éxito");
+  }
 }

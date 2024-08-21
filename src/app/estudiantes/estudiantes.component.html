@@ -1,4 +1,6 @@
-<div class="container col-md-5">
+<div class="container mt-2 col-md-5">
+    <h2  class=" text-center mb-3">Estudiantes</h2>
+<!--
     <form class="mb-5">
         <div class="row">
             <label class="form-label col" for="nombre">Nombre: <input class="form-control" type="text" name="nombre" id="nombre" [(ngModel)]="nombre"></label>
@@ -8,7 +10,7 @@
             <label class="form-label col" for="edad">Edad: <input class="form-control" type="number" name="edad" id="edad" [(ngModel)]="edad"></label>
         </div>
         <input class="btn btn-primary " type="button" value="Agregar estudiante" (click)="agregarEstudiante()">
-    </form>
+    </form> -->
 
     <app-estudiante *ngFor="let estudiante of estudiantes; let indice = index"  
         [student]="estudiante" [i]="indice">
