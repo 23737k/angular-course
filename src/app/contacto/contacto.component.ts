@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-contacto',
@@ -11,7 +12,15 @@ export class ContactoComponent {
   email:String;
   consulta:String;
 
+  constructor(private _router:Router){
+  }
+
   enviarConsulta(){
     alert("Consulta enviada con éxito");
+  }
+
+  //Primeramente debo inyectar el Router.
+  irAHome(){
+    this._router.navigateByUrl('');
   }
 }
