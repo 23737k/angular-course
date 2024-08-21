@@ -7,7 +7,8 @@ import { EstudianteComponent } from './estudiante/estudiante.component';
 import { EstudiantesComponent } from './estudiantes/estudiantes.component';
 import { FormularioMateriasComponent } from './formulario-materias/formulario-materias.component';
 import { FormsModule } from '@angular/forms';
-import { AlertService } from './service/alert.service';
+import { AlertService } from './service/alert/alert.service';
+import { EstudianteService } from './service/estudiante/estudiante.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { AlertService } from './service/alert.service';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [AlertService],
+  providers: [AlertService, EstudianteService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
