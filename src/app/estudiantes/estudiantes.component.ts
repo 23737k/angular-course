@@ -1,7 +1,7 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { Estudiante } from '../model/estudiante'
-import { AlertService } from '../service/alert/alert.service';
 import { EstudianteService } from '../service/estudiante/estudiante.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-estudiantes',
@@ -21,10 +21,10 @@ export class EstudiantesComponent implements OnInit{
   //Al colocar private se declara y almacena la dependencia al mismo tiempo. Ts crea automáticamente una propiedad para almacenar la dependencia inyectada. 
   //Tambien se podria utilizar public o protected. En este caso el servicio solo puede ser accedido dentro de la clase.
 
-  constructor(private _estudianteService:EstudianteService){
+  constructor(private _estudianteService:EstudianteService, private _router:Router){
   }
   ngOnInit(): void {
-    this.estudiantes = this._estudianteService.getEstudiantes();
+    this.estudiantes = this._estudianteService.estudiantes;
   }
 
   agregarEstudiante(){
