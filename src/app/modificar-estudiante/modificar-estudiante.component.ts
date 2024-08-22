@@ -19,18 +19,15 @@ export class ModificarEstudianteComponent {
     //Obtengo el path y lo almaceno en el indice
     this.indice = this._route.snapshot.params['id'];
     //Mediante EstudianteService y el índice obtengo el estudiante deseado
-    let estudiante = this._estudianteService.estudiantes[this.indice-1];
-    
+    let estudiante = this._estudianteService.obtenerEstudiante(this.indice);
     this.nombre = estudiante.nombre;
     this.apellido = estudiante.apellido;
     this.edad = estudiante.edad;
   }
 
   modificarEstudiante(){
-    let estudiante =  this._estudianteService.estudiantes[this.indice-1];
-    estudiante.nombre = this.nombre;
-    estudiante.apellido = this.apellido;
-    estudiante.edad = this.edad;
+    let estudiante = new Estudiante(this.nombre, this.apellido, this.edad);
+    this._estudianteService.modificarEstudiante(this.indice, estudiante);
     this._router.navigateByUrl('/estudiantes'); 
   }
 

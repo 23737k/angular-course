@@ -28,4 +28,13 @@ export class EstudianteService{
     this.estudiantes.push(estudiante);
     this._router.navigateByUrl('estudiantes');
    }
+
+   modificarEstudiante(indice:number, estudiante:Estudiante){
+    this.estudiantes.splice(indice,1,estudiante);
+   }
+
+   obtenerEstudiante(indice:number){
+    return this.estudiantes[indice];
+   }
+
 }
