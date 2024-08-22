@@ -1,13 +1,17 @@
 
 <div class="mt-3">
     <div class="row">
-        <div class="col">
-            <p>{{i+1}}. {{student.nombre}} {{student.apellido}}, {{student.edad}} años </p>
-            <span>Materias:</span>
-            <ul>
-                <li *ngFor="let materia of student.materias">{{materia}}</li>
-            </ul>
-            <app-formulario-materias (nuevaMateria)="agregarMateria($event)"></app-formulario-materias>
+        <div class="row">
+            <div class="col-8">{{i+1}}. {{student.nombre}} {{student.apellido}}, {{student.edad}} años </div>
+            <div class="col-4 text-end"><a [routerLink]="['/modificar-estudiante',i+1]">modificar</a></div>
+            <div class="mt-2">
+                <span class="mt-2">Materias:</span>
+                <ul>
+                    <li *ngFor="let materia of student.materias">{{materia}}</li>
+                </ul>
+                <app-formulario-materias (nuevaMateria)="agregarMateria($event)"></app-formulario-materias> 
+            </div>
+            
         </div>
     </div>
 </div>

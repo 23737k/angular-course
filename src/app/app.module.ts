@@ -13,13 +13,15 @@ import { HomeComponent } from './home/home.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ContactoComponent } from './contacto/contacto.component';
 import { RegistroComponent } from './registro/registro.component';
+import { ModificarEstudianteComponent } from './modificar-estudiante/modificar-estudiante.component';
 
 //Definimos las rutas
 const appRoutes:Routes=[
   {path:'', component:HomeComponent},
   {path:'registro', component:RegistroComponent},
   {path:'contacto', component:ContactoComponent},
-  {path:'estudiantes', component:EstudiantesComponent}
+  {path:'estudiantes', component:EstudiantesComponent},
+  {path:'modificar-estudiante/:id', component:ModificarEstudianteComponent}
 ]
 
 @NgModule({
@@ -30,7 +32,8 @@ const appRoutes:Routes=[
     FormularioMateriasComponent,
     HomeComponent,
     ContactoComponent,
-    RegistroComponent
+    RegistroComponent,
+    ModificarEstudianteComponent
   ],
   imports: [
     BrowserModule,
